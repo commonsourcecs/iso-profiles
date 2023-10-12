@@ -32,9 +32,9 @@ libdvdcss
 manjaro-alsa
 ## cscs removed ## manjaro-pulse
 phonon-qt5-gstreamer
-pulseaudio-bluetooth
-pulseaudio-ctl
-pulseaudio-zeroconf
+## cscs removed ## pulseaudio-bluetooth
+## cscs removed ## pulseaudio-ctl
+## cscs removed ## pulseaudio-zeroconf
 
 ## Btrfs
 grub-btrfs
