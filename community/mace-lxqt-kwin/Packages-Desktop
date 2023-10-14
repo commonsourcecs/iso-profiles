@@ -155,7 +155,7 @@ unzip
 pigz
 lzop
 
-## this is a maintainers oversight
+## Needed for Portal
 xdg-desktop-portal
 
 ## Misc
