@@ -288,6 +288,10 @@ nnn
 micro-manjaro
 wireplumber
 manjaro-pipewire
+ventoy
+unzip
+pigz
+lzop
 
 ## this is a maintainers oversight
 xdg-desktop-portal

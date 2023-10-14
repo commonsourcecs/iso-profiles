@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=
+Exec=/usr/bin/okular .welcome-macer.pdf
+GenericName=
+Icon=litewelcome
+MimeType=
+Name=Welcome
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
