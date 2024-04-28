@@ -26,15 +26,12 @@ gst-plugins-good
 gst-plugins-ugly
 libcanberra
 >multilib lib32-libcanberra
-libcanberra-pulse
->multilib lib32-libcanberra-pulse
 libdvdcss
 manjaro-alsa
-## cscs removed ## manjaro-pulse
-phonon-qt5-gstreamer
-## cscs removed ## pulseaudio-bluetooth
-## cscs removed ## pulseaudio-ctl
-## cscs removed ## pulseaudio-zeroconf
+manjaro-gstreamer
+>extra manjaro-modem
+manjaro-pipewire
+phonon-qt5-vlc
 
 ## Btrfs
 grub-btrfs
@@ -48,7 +45,7 @@ udisks2
 
 ## Fonts
 ttf-dejavu
-# cantarell-fonts        # Installed as gnome-themes-standard dependency
+#cantarell-fonts          # required by gnome-themes-extra
 noto-fonts               # default font
 #noto-fonts-cjk           # asian fonts - needed big package, ~76 mb compressed
 adobe-source-sans-pro-fonts
@@ -106,7 +103,7 @@ audiocd-kio
 bluedevil
 kde-gtk-config
 kdeplasma-addons
-kgamma5
+kgamma
 kinfocenter
 kmenuedit
 kscreen
@@ -123,7 +120,6 @@ plasma-desktop
 plasma-nm
 plasma-pa
 plasma-simplemenu
-## was commented # seems to need sddm-git # no it doesnt
 plasma-wayland-session
 plasma-workspace
 >extra plasma-workspace-wallpapers
@@ -135,7 +131,7 @@ xdg-desktop-portal-kde
 plasma-thunderbolt
 
 ## Themes QT/GTK/SDDM
-gnome-themes-standard
+gnome-themes-extra
 oxygen # needed to provide KDE system sounds
 oxygen-icons
 sddm-breath-theme
@@ -188,7 +184,7 @@ kdegraphics-thumbnailers  # PDF and PS thumbnails
 ffmpegthumbs              # video thumbnails
 
 ## Optional dependencies for gwenview
-kimageformats     # support for dds, xcf, exr, psd, and more image formats
+kimageformats5     # support for dds, xcf, exr, psd, and more image formats
 qt5-imageformats  # support for tiff, webp, and more image formats
 
 ## Optional dependencies for kaccounts-integration
@@ -227,7 +223,6 @@ plasma-systemmonitor
 powertop
 #>extra qbittorrent
 neofetch
-systemd-kcm
 ## cscs removed ## plymouth-kcm
 #>extra thunderbird
 >extra vlc
@@ -271,7 +266,6 @@ xdg-utils
 ## cscs removed ## power-profiles-daemon
 
 ## Misc
-manjaro-hotfixes
 >basic squashfs-tools
 
 ## cscs
@@ -286,12 +280,8 @@ papirus-maia-icon-theme
 meld
 nnn
 micro-manjaro
-wireplumber
-manjaro-pipewire
 ventoy
 unzip
 pigz
 lzop
 
-## Needed for Portal
-xdg-desktop-portal
