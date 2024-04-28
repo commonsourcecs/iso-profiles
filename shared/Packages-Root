@@ -24,8 +24,9 @@ ecryptfs-utils
 efibootmgr
 exfatprogs
 f2fs-tools
+glibc-locales
 grub
-haveged
+#haveged
 inetutils
 intel-ucode
 jfsutils
@@ -60,6 +61,7 @@ sudo
 sysfsutils
 systemd
 texinfo
+update-grub
 usbutils
 vi
 wget

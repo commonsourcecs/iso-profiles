@@ -121,7 +121,7 @@ sddm-kcm
 bluedevil
 kde-gtk-config
 kdeplasma-addons
-kgamma5
+kgamma
 kinfocenter
 kmenuedit
 kscreen
@@ -202,7 +202,7 @@ ffmpegthumbs              # video thumbnails
 ruby                      # installing new service menus with GHNS
 
 ## Optional dependencies for gwenview
-kimageformats     # support for dds, xcf, exr, psd, and more image formats
+kimageformats5     # support for dds, xcf, exr, psd, and more image formats
 qt5-imageformats  # support for tiff, webp, and more image formats
 
 ## Optional dependencies for k3b
@@ -296,7 +296,6 @@ xdg-utils
 xdg-su
 
 ## Misc
-manjaro-hotfixes
 
 ## Flatpak support
 #>extra flatpak

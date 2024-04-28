@@ -4,7 +4,6 @@ KERNEL-broadcom-wl
 KERNEL-r8168
 #KERNEL-rt3562sta
 KERNEL-virtualbox-guest-modules
-manjaro-hotfixes
 manjaro-live-skel
 mkinitcpio-nfs-utils
 nbd
@@ -37,7 +36,6 @@ xf86-video-dummy
 xf86-video-fbdev
 xf86-video-intel
 xf86-video-nouveau
-xf86-video-openchrome
 xf86-video-sisusb
 xf86-video-vesa
 xf86-video-vmware

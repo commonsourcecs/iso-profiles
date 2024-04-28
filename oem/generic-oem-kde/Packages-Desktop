@@ -106,7 +106,7 @@ audiocd-kio
 bluedevil
 kde-gtk-config
 kdeplasma-addons
-kgamma5
+kgamma
 kinfocenter
 kmenuedit
 kscreen
@@ -183,7 +183,7 @@ kdegraphics-thumbnailers  # PDF and PS thumbnails
 ffmpegthumbs              # video thumbnails
 
 ## Optional dependencies for gwenview
-kimageformats     # support for dds, xcf, exr, psd, and more image formats
+kimageformats5     # support for dds, xcf, exr, psd, and more image formats
 qt5-imageformats  # support for tiff, webp, and more image formats
 
 ## Optional dependencies for kaccounts-integration
@@ -264,7 +264,6 @@ xdg-utils
 #>extra kernel-alive
 
 ## Misc
-manjaro-hotfixes
 >basic squashfs-tools
 
 ## OEM

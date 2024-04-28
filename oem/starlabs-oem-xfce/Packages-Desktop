@@ -104,7 +104,8 @@ freetype2          # tumbler - for font thumbnails
 gnome-keyring      # fix wlan segfault
 libgsf             # tumbler - for ODF thumbnails
 libopenraw         # tumbler - for RAW thumbnails
-light-locker
+# light-locker
+xfce4-screensaver
 network-manager-applet
 menulibre
 poppler-glib       # tumbler - for PDF thumbnails
@@ -177,7 +178,7 @@ manjaro-hello
 manjaro-application-utility
 manjaro-settings-manager
 manjaro-settings-manager-notifier
->basic midori
+#>basic midori                     # dropped to AUR
 >extra mlocate
 mousepad
 mugshot
@@ -240,7 +241,6 @@ xdg-desktop-portal-gtk
 
 ## Misc
 gtkhash-thunar
-manjaro-hotfixes
 >basic squashfs-tools
 xiccd # enable color profile settings
 tlp
