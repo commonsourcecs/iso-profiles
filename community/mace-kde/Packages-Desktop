@@ -270,6 +270,7 @@ xdg-utils
 
 ## cscs
 base-devel
+pacman-contrib
 systemd-resolvconf
 tlp
 kernel-modules-hook
