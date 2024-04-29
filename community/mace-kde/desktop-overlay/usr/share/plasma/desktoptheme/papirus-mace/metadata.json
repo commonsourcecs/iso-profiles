@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+            	"Email": "cscs@disroot.org",
+                "Name": "cscs"
+            }
+        ],
+        "Category": "Plasma Theme",
+        "Description": "Mace Papirus Style",
+        "Id": "papirus-mace",
+        "License": "(GPL in Breeze Elements)",
+        "Name": "Papirus Mace",
+        "Version": "0.1.0",
+        "Website": "https://cscs.gitlab.com"
+    },
+    "X-Plasma-API": "5.0"
+}

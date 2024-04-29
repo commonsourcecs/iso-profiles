@@ -138,6 +138,44 @@ ex ()
 
 # MaCE
 
-0paste () {
-curl -F 'file=@-' https://0x0.st
+pyserv() {
+	_pyserv=$(ip route | tail -n1 | awk '{print $9}')
+	echo "Starting share server at "$_pyserv":4444";
+	python -m http.server 4444;
+}
+
+0paste() {
+    local url='https://0x0.st'
+    if (( $# )); then
+        local file
+        for file; do
+            curl -F "file=@""$file""" "$url"
+        done
+    else
+        curl -F 'file=@-' "$url"
+    fi
+}
+
+paster() {
+    local url='https://rustypaste.shuttleapp.rs'
+    if (( $# )); then
+        local file
+        for file; do
+            curl -F "file=@""$file""" "$url"
+        done
+    else
+        curl -F 'file=@-' "$url"
+    fi
+}
+
+tempload() {
+    local url='https://temp.sh/upload'
+    if (( $# )); then
+        local file
+        for file; do
+            curl -F "file=@""$file""" "$url"
+        done
+    else
+        curl -F 'file=@-' "$url"
+    fi
 }

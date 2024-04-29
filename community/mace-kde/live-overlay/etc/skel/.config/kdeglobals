@@ -1,5 +1,5 @@
 [General]
 BrowserApplication=firefox.desktop
-ColorScheme=BreezeDarkMaCE
+ColorScheme=BreezeMaceDark
 [Icons]
-Theme=Papirus-Dark-Maia
+Theme=Papirus-Mace-Dark
