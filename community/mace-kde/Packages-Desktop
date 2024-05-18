@@ -212,10 +212,10 @@ inxi
 #>extra libreoffice-still
 ## cscs removed ## manjaro-hello
 ## cscs removed ## manjaro-application-utility
-manjaro-settings-manager-kcm
+## cscs removed ## manjaro-settings-manager-kcm
 ## cscs removed ## manjaro-settings-manager-knotifier
 plasma-systemmonitor
-powertop
+>extra powertop ## shifted by cscs
 #>extra qbittorrent
 neofetch
 ## cscs removed ## plymouth-kcm
@@ -280,3 +280,4 @@ ventoy
 unzip
 pigz
 lzop
+>extra xdg-desktop-portal-gtk
