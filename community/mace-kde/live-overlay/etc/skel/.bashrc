@@ -136,7 +136,7 @@ ex ()
   fi
 }
 
-# MaCE
+# Mace
 
 pyserv() {
 	_pyserv=$(ip route | tail -n1 | awk '{print $9}')

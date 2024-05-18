@@ -1,5 +1,12 @@
 [General]
 BrowserApplication=firefox.desktop
 ColorScheme=BreezeMaceDark
+
 [Icons]
 Theme=Papirus-Mace-Dark
+
+[KDE]
+AnimationDurationFactor=0.125
+LookAndFeelPackage=org.papirus.mace.desktop
+ShowDeleteCommand=false
+SingleClick=false

@@ -1,0 +1,16 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "cscs"
+      }
+    ],
+    "Description": "Papirus Mace Theme",
+    "Id": "org.papirus.maceflat.desktop",
+    "License": "GPLv2+",
+    "Name": "Papirus-Mace Flat",
+    "Name[x-test]": "xxPapirusMaceFlatxx",
+    "Website": "cscs.gitlab.io"
+  }
+}

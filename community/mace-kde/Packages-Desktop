@@ -272,7 +272,7 @@ kernel-modules-hook
 bash-completion
 manjaro-downgrade
 zram-generator
-papirus-maia-icon-theme
+#papirus-maia-icon-theme
 meld
 nnn
 micro-manjaro
