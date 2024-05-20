@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+#
+# gcspt
+#
+# grub+ configuration search presentation tool
+#
+# <3 cscs <3
+#
+
+gcspt=$(find /boot -type f -name '*.cfg' 2>/dev/null | sort);
+gscpt=$(find /etc/grub.d -type f ! -name 'README' 2>/dev/null | sort);
+initz=$(find /boot -type f -name 'initramfs*' 2>/dev/null | sort); 
+imgz=$(find /boot -type f -name 'vmlinuz*' 2>/dev/null | sort); 
+modz=$(find /lib/modules -maxdepth 1 -type d 2>/dev/null | sort);
+mkinitz=$(find /etc -type f -name 'mkinitcpio*' 2>/dev/null | sort); 
+mkinitzd=$(find /etc/mkinitcpio.d -type f 2>/dev/null | sort);
+dracutz=$(find /etc -type f -name 'dracut*' 2>/dev/null | sort); 
+dracutzd=$(find /etc/dracut.conf.d -type f 2>/dev/null | sort);
+
+_gcspt_format () {
+    while read in; do ls -l --time-style=+'%F %R' "$in" | cut --complement -d ' ' -f1,2,3,4,5; done | column -t
+}
+
+#printf '\n...Bite-Sized Boot-Info...\n';
+
+printf "\nCurrently Running Kernel:\n$(uname -s -r)\n";
+
+printf '\nGrub Configuration Files:\n';
+
+echo "$gcspt" | _gcspt_format;
+echo "$gscpt" | _gcspt_format;
+
+printf '\nInstalled Kernels:\n';
+
+echo "$imgz" | _gcspt_format;
+
+printf '\nInitramfs Images:\n'; 
+
+echo "$initz" | _gcspt_format;
+
+if which mkinitcpio >/dev/null 2>&1; then
+
+printf '\nmkinitcpio:\n';
+
+echo "$mkinitz" | _gcspt_format;
+echo "$mkinitzd" | _gcspt_format;
+fi
+
+if which dracut >/dev/null 2>&1; then
+
+printf '\ndracut:\n';
+
+echo "$dracutz" | _gcspt_format;
+echo "$dracutzd" | _gcspt_format;
+
+fi
+
+printf '\nModule Directories:\n'; 
+
+for i in $modz; do du --time --time-style=+'%F %R' -sh $i; done | awk '{print $2,$3,$4,$1}' | column -t; 
+
+printf '\nHibernation:\n';
+
+grep -o 'resume=' /etc/default/grub || printf 'No "resume=" option found in /etc/default/grub\n';
+
+printf '\nSettings of /etc/default/grub:\n';
+
+awk 'NF && !/^ *#/ { print; }' /etc/default/grub;
+
+printf "\n"
+exit

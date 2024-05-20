@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+#               (Ma)njaro (Pa)ckage (Re)store             #
+#                          mapare                         #
+##  This script will retrieve and install package lists  ##
+#####                       cscs                      #####
+
+[[ $# -eq 0 ]] && set -- -h
+
+echo "";
+echo " Manjaro Package Restore";
+echo "";
+echo " Retrieve and reinstall package lists";
+echo "";
+
+mapare_getdesk() {   
+      while true; do
+         read -p " Please provide desktop environment (kde,xfce,gnome): "  deskanswer
+         case $deskanswer in
+            [Kk][Dd][Ee] ) break;;
+            [Gg][Nn][Oo][Mm][Ee] ) break ;;
+            [Xx][Ff][Cc][Ee] ) break ;;
+            * ) echo -e "\n Please input a supported desktop.\n";;
+         esac
+      done
+      deskchoice=$(echo "$deskanswer"| awk '{print tolower($0)}')
+}
+
+mapare_cln_payload() {
+      kernelz=$(pacman -Qsq "^linux" | grep "^linux[0-9]*[-rt]*$" | awk '{print $1}' ORS=' ');
+      pkgpayload=$(wget -qO- $donators | awk ' BEGIN { kernelz = ENVIRON["kernelz"] } $1 ~ /^[[:alpha:]]/ { if($1=="KERNEL") {$1=kernelz}print $1 }')
+}
+
+mapare_print() {
+      echo -e "\n Packages for installation:\n\n";
+      pacman -Sp $pkgpayload $needed --print-format "%n %v" 
+}
+
+mapare_help() {
+      echo -e  " Options:\n\n  -h to show this help\n\n  -I to install missing packages (--needed by default)\n\n Install options (require -I):\n\n  -A to install the entire package list\n  -D to limit package list to desktop profile\n  -E to mark packages as explicitly installed\n  -P to only print the package list\n  -R to reinstall system packages\n\n  Use the additional --overwrite flag to overwrite existing files.\n  (Use With Caution)\n"
+}
+
+needed="--needed"
+
+while getopts 'AEIDRPHh' mafunc; do
+      case "$mafunc" in 
+
+         A) needed="";
+            if [[ $* != *I* ]]; then
+               mapare_help; exit;
+            fi ;;
+
+         E) explicit="--asexplicit";
+            if [[ $* != *I* ]]; then
+               mapare_help; exit;
+            fi ;; 
+
+         I) mapare_getdesk;
+            if [[ $* != *D* ]]; then
+               donator1=https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/raw/master/shared/Packages-Root;
+               donator2=https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/raw/master/shared/Packages-Mhwd;
+               donator3=https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/raw/master/manjaro/"$deskchoice"/Packages-Desktop;
+               donators=$(echo "$donator1" "$donator3");
+               #donators=$(echo "$donator1" "$donator2" $donator3");
+            else
+               donator3=https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/raw/master/manjaro/"$deskchoice"/Packages-Desktop;
+               donators=$(echo  "$donator3");
+            fi ;;
+
+         D) if [[ $* != *I* ]]; then
+               mapare_getdesk;
+            fi;
+            donator3=https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/raw/master/manjaro/"$deskchoice"/Packages-Desktop;
+            donators=$(echo  "$donator3");
+            if [[ $* != *I* ]]; then
+               mapare_cln_payload;
+               mapare_print; exit ;
+            fi ;;
+
+         R) needed=""
+            pkgpayload=$(pacman -Qnq) ;;
+
+         P) if [[ $* != *R* ]] ; then
+               mapare_cln_payload;
+            fi;
+            mapare_print; exit ;;
+
+         H|h|?) mapare_help; exit ;;
+
+      esac
+
+if [[ $* != *R* ]] ; then
+   mapare_cln_payload;
+fi;
+
+shift $(expr $OPTIND - 1)
+
+done
+
+if [[ $1 == '--overwrite' ]] ; then
+   sudo pacman -Syu $pkgpayload $needed $explicit --overwrite '*';
+else
+   sudo pacman -Syu $pkgpayload $needed $explicit;
+fi;
+
+exit
