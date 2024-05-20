@@ -61,9 +61,9 @@ terminus-font
 
 ## Package management
 #>extra appimagelauncher
->extra pamac-gtk3 ## shifted by cscs
+pamac-gtk3
 ## cscs removed ## pamac-tray-icon-plasma
->extra pamac-cli ## shifted by cscs
+pamac-cli
 #>extra apparmor
 #>extra snapd
 #>extra snapd-glib
