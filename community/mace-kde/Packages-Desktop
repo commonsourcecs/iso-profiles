@@ -61,9 +61,9 @@ terminus-font
 
 ## Package management
 #>extra appimagelauncher
-pamac-gtk3
+>extra pamac-gtk3 ## shifted by cscs
 ## cscs removed ## pamac-tray-icon-plasma
-pamac-cli
+>extra pamac-cli ## shifted by cscs
 #>extra apparmor
 #>extra snapd
 #>extra snapd-glib
@@ -217,7 +217,7 @@ inxi
 plasma-systemmonitor
 >extra powertop ## shifted by cscs
 #>extra qbittorrent
-neofetch
+## cscs removed ## neofetch
 ## cscs removed ## plymouth-kcm
 #>extra thunderbird
 >extra vlc
@@ -264,15 +264,17 @@ xdg-utils
 >basic squashfs-tools
 
 ## cscs
+gparted
 base-devel
 pacman-contrib
 systemd-resolvconf
 tlp
+install-grub
 kernel-modules-hook
 bash-completion
 manjaro-downgrade
 zram-generator
-#papirus-maia-icon-theme
+# papirus-maia-icon-theme
 meld
 nnn
 micro-manjaro
