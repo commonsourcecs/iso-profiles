@@ -317,3 +317,29 @@ ruby
 cloud-utils
 qemu-img
 rsync
+
+atop
+borg
+busybox
+cabextract
+casync
+ccid
+clonezilla
+dd_rescue
+dhcpcd
+dool
+dvd+rw-tools
+efitools
+ethtool
+expac
+fatresize
+>extra gsmartcontrol
+iftop
+iotop
+>extra kio-admin
+>extra linux-firmware-bnx2x
+mtools
+nvme-cli
+qemu-guest-agent
+rkhunter
+wireguard-tools
