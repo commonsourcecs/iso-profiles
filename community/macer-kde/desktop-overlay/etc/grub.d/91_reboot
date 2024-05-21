@@ -1,0 +1,9 @@
+#!/bin/sh
+
+echo "Adding reboot option." >&2
+
+cat << EOF
+menuentry 'Reboot' --class tool --class restart --id reboot {
+	reboot
+}
+EOF
