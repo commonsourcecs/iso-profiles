@@ -256,7 +256,7 @@ xorg-mkfontscale
 ## Desktop Utils
 perl-file-mimeinfo
 xdg-utils
->extra timeshift
+timeshift ## shifted by cscs
 #>extra kernel-alive
 ## cscs removed ## power-profiles-daemon
 
