@@ -7,6 +7,6 @@ Theme=Papirus-Mace-Dark
 
 [KDE]
 AnimationDurationFactor=0.125
-LookAndFeelPackage=org.papirus.maceflat.desktop
+LookAndFeelPackage=org.papirus.macerflat.desktop
 ShowDeleteCommand=false
 SingleClick=false
