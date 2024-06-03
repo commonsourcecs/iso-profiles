@@ -48,7 +48,7 @@ ttf-dejavu
 # cantarell-fonts        # Installed as gnome-themes-standard dependency
 noto-fonts               # default font
 #noto-fonts-cjk           # asian fonts - needed big package, ~76 mb compressed
-adobe-source-sans-pro-fonts
+>extra adobe-source-sans-pro-fonts ## shifted by cscs
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-han-sans-cn-fonts
@@ -132,7 +132,7 @@ plasma-thunderbolt
 gnome-themes-extra
 #oxygen # needed to provide KDE system sounds
 #oxygen-icons
-sddm-breath-theme
+>extra sddm-breath-theme ## shifted by cscs
 grub-theme-manjaro
 breeze5 # Fore Qt5 Breeze style
 breeze-gtk
@@ -264,22 +264,21 @@ xdg-utils
 >basic squashfs-tools
 
 ## cscs
-gparted
 base-devel
-pacman-contrib
-systemd-resolvconf
-tlp
+bash-completion
+gparted
 install-grub
 kernel-modules-hook
-bash-completion
-manjaro-downgrade
-zram-generator
-# papirus-maia-icon-theme
-meld
-nnn
-micro-manjaro
-ventoy
-unzip
-pigz
 lzop
->extra xdg-desktop-portal-gtk
+manjaro-downgrade
+meld
+micro-manjaro
+nnn
+pacman-contrib
+pigz
+systemd-resolvconf
+tlp
+unzip
+ventoy
+xdg-desktop-portal-gtk
+zram-generator

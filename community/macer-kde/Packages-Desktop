@@ -264,82 +264,85 @@ timeshift ## shifted by cscs
 >basic squashfs-tools
 
 ## cscs
-gparted
 base-devel
-pacman-contrib
-systemd-resolvconf
-tlp
+bash-completion
+gparted
 install-grub
 kernel-modules-hook
-bash-completion
-manjaro-downgrade
-zram-generator
-# papirus-maia-icon-theme
-meld
-nnn
-micro-manjaro
-ventoy
-unzip
-pigz
 lzop
->extra xdg-desktop-portal-gtk
+manjaro-downgrade
+meld
+micro-manjaro
+nnn
+pacman-contrib
+pigz
+systemd-resolvconf
+tlp
+unzip
+ventoy
+xdg-desktop-portal-gtk
+zram-generator
 
 ## MaceR
-ext4magic
-ddrescue
-testdisk
-foremost
-sleuthkit
-fsarchiver
-partclone
-wipe
-lynx
-rclone
-tcpdump
-openbsd-netcat
-filezilla
->extra warpinator
-krdc
-rdesktop
-keepassxc
-vim
-zip
-hexedit
-udftools
-cdrtools
-flashrom
 arch-wiki-docs
-wikiman
-chntpw
-ophcrack
-backuppc
-ruby
-cloud-utils
-qemu-img
-rsync
-
 atop
+backuppc
 borg
+>extra btrfs-assistant
+btrfsmaintenance
 busybox
 cabextract
 casync
 ccid
+cdrtools
+chntpw
 clonezilla
+cloud-utils
 dd_rescue
+ddrescue
 dhcpcd
 dool
 dvd+rw-tools
 efitools
 ethtool
 expac
+ext4magic
 fatresize
+>extra filezilla
+flashrom
+foremost
+fsarchiver
 >extra gsmartcontrol
+hexedit
 iftop
 iotop
+keepassxc
 >extra kio-admin
+krdc
 >extra linux-firmware-bnx2x
+lynx
 mtools
 nvme-cli
+>extra okteta
+openbsd-netcat
+ophcrack
+partclone
 qemu-guest-agent
+qemu-img
+rclone
+rdesktop
 rkhunter
+rsync
+ruby
+sleuthkit
+snapper
+>extra snapper-gui
+tcpdump
+testdisk
+udftools
+vim
+>extra warpinator
+wikiman
+wipe
 wireguard-tools
+zip
